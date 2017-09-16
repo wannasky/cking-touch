@@ -30,6 +30,8 @@
     var SWIPE_TIME = 300;
     //滑动最小位移
     var SWIPE_MIN_DISTANCE = 100;
+    //拖动
+    var IS_START_DRAG = false;
 
     //手势节点属性
     var touchPos = {
@@ -42,6 +44,7 @@
         IS_TOUCH_START = false;
         TOUCH_START_TIME = 0;
         IS_SWIPE = false;
+        IS_START_DRAG = false;
         touchPos = {};
     }
 
@@ -180,6 +183,18 @@
                     swipeDirection();
                     engine.trigger(element, 'swipe', detail);
                 }
+            }
+
+            if(!IS_START_DRAG){
+                IS_START_DRAG = true;
+                detail.swipe = 'start';
+                engine.trigger(element, 'dragStart', detail);
+            }else if(event.type === 'touchmove'){
+                detail.swipe = 'move';
+                engine.trigger(element, 'dragMove', detail);
+            }else if(event.type === 'touchend' || event.type === 'touchcancel'){
+                detail.swipe = 'end';
+                engine.trigger(element, 'dragEnd', detail);
             }
         }
     }

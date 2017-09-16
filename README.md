@@ -7,7 +7,7 @@ npm install cking-touch --save
 ```
 
 ## 简介
-移动端基本手势库，支持的有tap、hold、swipe(swipe/swipeStart/swipeMove/swipeEnd swipeLeft/swipeRight/swipeUp/swipeDown);
+移动端基本手势库，支持的有tap、hold、swipe(swipe/swipeStart/swipeMove/swipeEnd swipeLeft/swipeRight/swipeUp/swipeDown)、drag(dragStart/dragMove/dragEnd);
 
 ## 使用
 
