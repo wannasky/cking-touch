@@ -1,0 +1,17 @@
+{
+  "name": "cking-touch",
+  "version": "1.0.0",
+  "description": "移动端简易手势",
+  "keywords": [
+    "touch",
+    "tap",
+    "hold",
+    "swipe"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:wannasky/cking-touch.git"
+  },
+  "author": "wannasky",
+  "license": "MIT"
+}
