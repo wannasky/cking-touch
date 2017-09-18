@@ -54,6 +54,7 @@
         //绑定
         bind: function (element, evt, handler) {
             var wrapHandler = function (event) {
+                event.detail.currentTarget = element;
                 var returnValue = handler.call(event.target, event);
                 if(typeof returnValue !== 'undefined' && !returnValue){
                     event.stopPropagation();
